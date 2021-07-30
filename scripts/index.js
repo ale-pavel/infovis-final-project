@@ -8,8 +8,8 @@ d3.json('dataset/graph.json')
 
 
 function draw_plot(data) {
-  height = 600
-  width = 1200
+  height = 400
+  width = 1000
 
   color = () => {
     const scale = d3.scaleOrdinal(d3.schemeCategory10);
