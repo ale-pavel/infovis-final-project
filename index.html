@@ -5,10 +5,13 @@
 		<meta charset="UTF-8">
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 		<script type='text/javascript' src='d3js/d3.min.js'></script>
+		<script type="module">
+			import {forceSimulation} from "https://cdn.skypack.dev/d3-force@3";
+		</script>
 	</head>
 
-	<body style="background-color:#ffcdad;">
-		<script type='text/javascript' src='scripts/index.js' ></script>
+	<body style="background-color:white;">
+		<script type='text/javascript' src='scripts/index.js'></script>
 		<h2>Hrafnkels Saga Visualization</h2>
 		<div id="graph_visualization"></div>
 	</body>
