@@ -8,8 +8,8 @@ d3.json('dataset/graph.json')
 
 
 function draw_plot(data) {
-  height = 400
-  width = 1000
+  height = 1400
+  width = 800
 
   chart = () => {
     const links = data.links.map(d => Object.create(d));
@@ -35,7 +35,7 @@ function draw_plot(data) {
     link.append("title")
         .text(d => d.action_description);
 
-    const node = svg.append("g")
+    /*const node = svg.append("g")
         .attr("stroke", "#555")
         .attr("stroke-width", 0.75)
       .selectAll("circle")
@@ -46,22 +46,25 @@ function draw_plot(data) {
         .call(drag(simulation));
 
     node.append("title")
-        .text(d => d.label);
+        .text(d => d.label);*/
 
-    /*const node = svg.append("g")
+    const node = svg.append("g")
       .selectAll("g")
       .data(nodes)
-      .enter().append("g");
+      .enter().append("g")
+      .call(drag(simulation));
 
     const circles = node.append("circle")
         .attr("stroke", "#555")
         .attr("stroke-width", 0.75)
         .attr("r", 5)
-        .attr("fill", d => color(d.gender))
-        .call(drag(simulation));
+        .attr("fill", d => color(d.gender));
+        
 
-    node.append("title")
-        .text(d => d.label);*/
+    const circle_titles = node.append("text")
+        .text(d => d.label)
+        .attr('x', 8)
+        .attr('y', 2);
 
     simulation.on("tick", () => {
       link
@@ -71,12 +74,12 @@ function draw_plot(data) {
         .attr("y2", d => d.target.y);
 
       node
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y);
+        .attr("transform", function(d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        })
 
     });
 
-    return svg.node();
   }
 
 
