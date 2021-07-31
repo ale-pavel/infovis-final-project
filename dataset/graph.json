@@ -4,7 +4,7 @@
             "id": "1",
             "label": "King Harald Fair-Hair",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -12,7 +12,7 @@
             "id": "2",
             "label": "Halfdan the Black",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -20,7 +20,7 @@
             "id": "3",
             "label": "Gudrod the Hunting King",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -28,7 +28,7 @@
             "id": "4",
             "label": "Halfdan the Mild and Meal-stingy",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -36,7 +36,7 @@
             "id": "5",
             "label": "Eystein Fart",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -44,7 +44,7 @@
             "id": "6",
             "label": "Olaf Wood-carver",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -52,7 +52,7 @@
             "id": "7",
             "label": "Hallfred",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -60,7 +60,7 @@
             "id": "8",
             "label": "Wife of Hallfred",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -68,7 +68,7 @@
             "id": "9",
             "label": "Hrafnkel",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -76,7 +76,7 @@
             "id": "10",
             "label": "Arnthrud",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -84,7 +84,7 @@
             "id": "11",
             "label": "man",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "1.0",
             "page": "438.0"
         },
@@ -92,7 +92,7 @@
             "id": "12",
             "label": "Oddbjorg Skjoldalfsdottir",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "2.0",
             "page": "439.0"
         },
@@ -100,7 +100,7 @@
             "id": "13",
             "label": "Thorir",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "2.0",
             "page": "439.0"
         },
@@ -108,7 +108,7 @@
             "id": "14",
             "label": "Asbjorn",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "2.0",
             "page": "439.0"
         },
@@ -116,7 +116,7 @@
             "id": "15",
             "label": "Frey",
             "gender": "2",
-            "gender description": "other",
+            "gender_description": "other",
             "chapter": "2.0",
             "page": "439.0"
         },
@@ -124,7 +124,7 @@
             "id": "16",
             "label": "Bjarni",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "3.0",
             "page": "439.0"
         },
@@ -132,7 +132,7 @@
             "id": "17",
             "label": "Bjarni's wife",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "",
             "page": ""
         },
@@ -140,7 +140,7 @@
             "id": "18",
             "label": "Sam",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "3.0",
             "page": "439.0"
         },
@@ -148,7 +148,7 @@
             "id": "19",
             "label": "Eyvind",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -156,7 +156,7 @@
             "id": "20",
             "label": "Sam's wife",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "3.0",
             "page": "439.0"
         },
@@ -164,7 +164,7 @@
             "id": "21",
             "label": "king of Greeks",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -172,7 +172,7 @@
             "id": "22",
             "label": "Freyfaxi",
             "gender": "2",
-            "gender description": "other",
+            "gender_description": "other",
             "chapter": "",
             "page": ""
         },
@@ -180,7 +180,7 @@
             "id": "23",
             "label": "Thorbjorn",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "4.0",
             "page": "440.0"
         },
@@ -188,7 +188,7 @@
             "id": "24",
             "label": "Einar",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "4.0",
             "page": "440.0"
         },
@@ -196,7 +196,7 @@
             "id": "25",
             "label": "shepherds",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -204,7 +204,7 @@
             "id": "26",
             "label": "mealtime servant",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -212,7 +212,7 @@
             "id": "27",
             "label": "milking women",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "",
             "page": ""
         },
@@ -220,7 +220,7 @@
             "id": "28",
             "label": "new shepherd",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -228,7 +228,7 @@
             "id": "29",
             "label": "Thorkel",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "8.0",
             "page": "446.0"
         },
@@ -236,7 +236,7 @@
             "id": "30",
             "label": "Thjostar",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -244,7 +244,7 @@
             "id": "31",
             "label": "Thorgeir",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "8.0",
             "page": "447.0"
         },
@@ -252,7 +252,7 @@
             "id": "32",
             "label": "Thormod",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "8.0",
             "page": "447.0"
         },
@@ -260,7 +260,7 @@
             "id": "33",
             "label": "Thordis",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "8.0",
             "page": "447.0"
         },
@@ -268,7 +268,7 @@
             "id": "34",
             "label": "Thorolf Skallagrimson",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "8.0",
             "page": "447.0"
         },
@@ -276,7 +276,7 @@
             "id": "35",
             "label": "Eyvind's servant boy",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "14.0",
             "page": "456.0"
         },
@@ -284,7 +284,7 @@
             "id": "36",
             "label": "Servant woman",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -292,7 +292,7 @@
             "id": "37",
             "label": "Sighvat",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -300,7 +300,7 @@
             "id": "38",
             "label": "Snorri",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -308,7 +308,7 @@
             "id": "39",
             "label": "Hallstein",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -316,7 +316,7 @@
             "id": "40",
             "label": "Hrolf",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "",
             "page": ""
         },
@@ -324,7 +324,7 @@
             "id": "41",
             "label": "Thord ",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -332,7 +332,7 @@
             "id": "42",
             "label": "Halli",
             "gender": "1",
-            "gender description": "male",
+            "gender_description": "male",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -340,7 +340,7 @@
             "id": "43",
             "label": "Housekeeper",
             "gender": "0",
-            "gender description": "female",
+            "gender_description": "female",
             "chapter": "",
             "page": ""
         }
@@ -350,7 +350,7 @@
             "source": "1",
             "target": "2",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -358,7 +358,7 @@
             "source": "2",
             "target": "3",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -366,7 +366,7 @@
             "source": "3",
             "target": "4",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -374,7 +374,7 @@
             "source": "4",
             "target": "5",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -382,7 +382,7 @@
             "source": "5",
             "target": "6",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -390,7 +390,7 @@
             "source": "7",
             "target": "9",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "2.0",
             "page": ""
         },
@@ -398,7 +398,7 @@
             "source": "8",
             "target": "7",
             "action": "2",
-            "action description": "marriage",
+            "action_description": "marriage",
             "chapter": "1.0",
             "page": ""
         },
@@ -406,7 +406,7 @@
             "source": "9",
             "target": "7",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -414,7 +414,7 @@
             "source": "9",
             "target": "7",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "2.0",
             "page": ""
         },
@@ -422,7 +422,7 @@
             "source": "9",
             "target": "8",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "1.0",
             "page": ""
         },
@@ -430,7 +430,7 @@
             "source": "9",
             "target": "9",
             "action": "24",
-            "action description": "death_neutral",
+            "action_description": "death_neutral",
             "chapter": "16.0",
             "page": "462.0"
         },
@@ -438,7 +438,7 @@
             "source": "9",
             "target": "13",
             "action": "5",
-            "action description": "inheritance",
+            "action_description": "inheritance",
             "chapter": "16.0",
             "page": ""
         },
@@ -446,7 +446,7 @@
             "source": "9",
             "target": "14",
             "action": "5",
-            "action description": "inheritance",
+            "action_description": "inheritance",
             "chapter": "16.0",
             "page": ""
         },
@@ -454,7 +454,7 @@
             "source": "9",
             "target": "15",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "2.0",
             "page": ""
         },
@@ -462,7 +462,7 @@
             "source": "9",
             "target": "18",
             "action": "7",
-            "action description": "placed in command",
+            "action_description": "placed in command",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -470,7 +470,7 @@
             "source": "9",
             "target": "18",
             "action": "20",
-            "action description": "challenge",
+            "action_description": "challenge",
             "chapter": "15.0",
             "page": "460.0"
         },
@@ -478,7 +478,7 @@
             "source": "9",
             "target": "18",
             "action": "23",
-            "action description": "conversation_neutral",
+            "action_description": "conversation_neutral",
             "chapter": "13.0",
             "page": "456.0"
         },
@@ -486,7 +486,7 @@
             "source": "9",
             "target": "19",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "14.0",
             "page": "459.0"
         },
@@ -494,7 +494,7 @@
             "source": "9",
             "target": "19",
             "action": "22",
-            "action description": "hostility_lethal",
+            "action_description": "hostility_lethal",
             "chapter": "14.0",
             "page": "459.0"
         },
@@ -502,7 +502,7 @@
             "source": "9",
             "target": "22",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "5.0",
             "page": "442.0"
         },
@@ -510,7 +510,7 @@
             "source": "9",
             "target": "22",
             "action": "28",
-            "action description": "ownership",
+            "action_description": "ownership",
             "chapter": "3.0",
             "page": ""
         },
@@ -518,7 +518,7 @@
             "source": "9",
             "target": "23",
             "action": "19",
-            "action description": "intervention",
+            "action_description": "intervention",
             "chapter": "6.0",
             "page": "443.0"
         },
@@ -526,7 +526,7 @@
             "source": "9",
             "target": "24",
             "action": "24",
-            "action description": "death_neutral",
+            "action_description": "death_neutral",
             "chapter": "5.0",
             "page": ""
         },
@@ -534,7 +534,7 @@
             "source": "9",
             "target": "24",
             "action": "22",
-            "action description": "hostility_lethal",
+            "action_description": "hostility_lethal",
             "chapter": "5.0",
             "page": ""
         },
@@ -542,7 +542,7 @@
             "source": "9",
             "target": "24",
             "action": "22",
-            "action description": "hostility_lethal",
+            "action_description": "hostility_lethal",
             "chapter": "5.0",
             "page": "442.0"
         },
@@ -550,7 +550,7 @@
             "source": "9",
             "target": "24",
             "action": "14",
-            "action description": "accusation",
+            "action_description": "accusation",
             "chapter": "5.0",
             "page": ""
         },
@@ -558,7 +558,7 @@
             "source": "9",
             "target": "26",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "5.0",
             "page": ""
         },
@@ -566,7 +566,7 @@
             "source": "9",
             "target": "26",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "5.0",
             "page": "442.0"
         },
@@ -574,7 +574,7 @@
             "source": "9",
             "target": "29",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "11.0",
             "page": "452.0"
         },
@@ -582,7 +582,7 @@
             "source": "9",
             "target": "37",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -590,7 +590,7 @@
             "source": "9",
             "target": "38",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -598,7 +598,7 @@
             "source": "9",
             "target": "41",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -606,7 +606,7 @@
             "source": "9",
             "target": "42",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "14.0",
             "page": "457.0"
         },
@@ -614,7 +614,7 @@
             "source": "10",
             "target": "7",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "1.0",
             "page": ""
         },
@@ -622,7 +622,7 @@
             "source": "10",
             "target": "7",
             "action": "24",
-            "action description": "death_neutral",
+            "action_description": "death_neutral",
             "chapter": "1.0",
             "page": ""
         },
@@ -630,7 +630,7 @@
             "source": "11",
             "target": "7",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "1.0",
             "page": ""
         },
@@ -638,7 +638,7 @@
             "source": "12",
             "target": "9",
             "action": "2",
-            "action description": "marriage",
+            "action_description": "marriage",
             "chapter": "2.0",
             "page": ""
         },
@@ -646,7 +646,7 @@
             "source": "13",
             "target": "9",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "2.0",
             "page": ""
         },
@@ -654,7 +654,7 @@
             "source": "13",
             "target": "12",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "2.0",
             "page": ""
         },
@@ -662,7 +662,7 @@
             "source": "14",
             "target": "9",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "2.0",
             "page": ""
         },
@@ -670,7 +670,7 @@
             "source": "14",
             "target": "12",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "2.0",
             "page": ""
         },
@@ -678,7 +678,7 @@
             "source": "17",
             "target": "16",
             "action": "2",
-            "action description": "marriage",
+            "action_description": "marriage",
             "chapter": "3.0",
             "page": ""
         },
@@ -686,7 +686,7 @@
             "source": "18",
             "target": "9",
             "action": "23",
-            "action description": "conversation_neutral",
+            "action_description": "conversation_neutral",
             "chapter": "13.0",
             "page": "456.0"
         },
@@ -694,7 +694,7 @@
             "source": "18",
             "target": "9",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "10.0",
             "page": "450.0"
         },
@@ -702,7 +702,7 @@
             "source": "18",
             "target": "9",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -710,7 +710,7 @@
             "source": "18",
             "target": "9",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "14.0",
             "page": "459.0"
         },
@@ -718,7 +718,7 @@
             "source": "18",
             "target": "9",
             "action": "14",
-            "action description": "accusation",
+            "action_description": "accusation",
             "chapter": "7.0",
             "page": ""
         },
@@ -726,7 +726,7 @@
             "source": "18",
             "target": "9",
             "action": "14",
-            "action description": "accusation",
+            "action_description": "accusation",
             "chapter": "10.0",
             "page": "450.0"
         },
@@ -734,7 +734,7 @@
             "source": "18",
             "target": "9",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "7.0",
             "page": ""
         },
@@ -742,7 +742,7 @@
             "source": "18",
             "target": "9",
             "action": "17",
-            "action description": "insult",
+            "action_description": "insult",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -750,7 +750,7 @@
             "source": "18",
             "target": "16",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "3.0",
             "page": ""
         },
@@ -758,7 +758,7 @@
             "source": "18",
             "target": "17",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "3.0",
             "page": ""
         },
@@ -766,7 +766,7 @@
             "source": "18",
             "target": "19",
             "action": "12",
-            "action description": "invitation",
+            "action_description": "invitation",
             "chapter": "14.0",
             "page": "456.0"
         },
@@ -774,7 +774,7 @@
             "source": "18",
             "target": "19",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "14.0",
             "page": "460.0"
         },
@@ -782,7 +782,7 @@
             "source": "18",
             "target": "21",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "8.0",
             "page": ""
         },
@@ -790,7 +790,7 @@
             "source": "18",
             "target": "23",
             "action": "7",
-            "action description": "placed in command",
+            "action_description": "placed in command",
             "chapter": "6.0",
             "page": "444.0"
         },
@@ -798,7 +798,7 @@
             "source": "18",
             "target": "23",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "12.0",
             "page": "455.0"
         },
@@ -806,7 +806,7 @@
             "source": "18",
             "target": "29",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "12.0",
             "page": "455.0"
         },
@@ -814,7 +814,7 @@
             "source": "18",
             "target": "29",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "16.0",
             "page": ""
         },
@@ -822,7 +822,7 @@
             "source": "18",
             "target": "31",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "16.0",
             "page": "461.0"
         },
@@ -830,7 +830,7 @@
             "source": "18",
             "target": "31",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "10.0",
             "page": "452.0"
         },
@@ -838,7 +838,7 @@
             "source": "18",
             "target": "31",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "10.0",
             "page": "452.0"
         },
@@ -846,7 +846,7 @@
             "source": "18",
             "target": "31",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "12.0",
             "page": "455.0"
         },
@@ -854,7 +854,7 @@
             "source": "18",
             "target": "31",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "16.0",
             "page": ""
         },
@@ -862,7 +862,7 @@
             "source": "19",
             "target": "16",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "3.0",
             "page": ""
         },
@@ -870,7 +870,7 @@
             "source": "19",
             "target": "17",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "3.0",
             "page": ""
         },
@@ -878,7 +878,7 @@
             "source": "19",
             "target": "21",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "3.0",
             "page": ""
         },
@@ -886,7 +886,7 @@
             "source": "19",
             "target": "35",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "14.0",
             "page": "456.0"
         },
@@ -894,7 +894,7 @@
             "source": "20",
             "target": "18",
             "action": "2",
-            "action description": "marriage",
+            "action_description": "marriage",
             "chapter": "3.0",
             "page": ""
         },
@@ -902,7 +902,7 @@
             "source": "23",
             "target": "9",
             "action": "20",
-            "action description": "challenge",
+            "action_description": "challenge",
             "chapter": "6.0",
             "page": "443.0"
         },
@@ -910,7 +910,7 @@
             "source": "23",
             "target": "18",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "6.0",
             "page": "444.0"
         },
@@ -918,7 +918,7 @@
             "source": "23",
             "target": "24",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "4.0",
             "page": "440.0"
         },
@@ -926,7 +926,7 @@
             "source": "23",
             "target": "24",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "4.0",
             "page": ""
         },
@@ -934,7 +934,7 @@
             "source": "23",
             "target": "31",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "9.0",
             "page": ""
         },
@@ -942,7 +942,7 @@
             "source": "24",
             "target": "9",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "4.0",
             "page": ""
         },
@@ -950,7 +950,7 @@
             "source": "24",
             "target": "9",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "4.0",
             "page": "440.0"
         },
@@ -958,7 +958,7 @@
             "source": "24",
             "target": "9",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "4.0",
             "page": ""
         },
@@ -966,7 +966,7 @@
             "source": "24",
             "target": "22",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "5.0",
             "page": ""
         },
@@ -974,7 +974,7 @@
             "source": "24",
             "target": "23",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "4.0",
             "page": ""
         },
@@ -982,7 +982,7 @@
             "source": "24",
             "target": "25",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "5.0",
             "page": ""
         },
@@ -990,7 +990,7 @@
             "source": "24",
             "target": "25",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "5.0",
             "page": "441.0"
         },
@@ -998,7 +998,7 @@
             "source": "26",
             "target": "9",
             "action": "11",
-            "action description": "discover information",
+            "action_description": "discover information",
             "chapter": "5.0",
             "page": ""
         },
@@ -1006,7 +1006,7 @@
             "source": "29",
             "target": "9",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "11.0",
             "page": "452.0"
         },
@@ -1014,7 +1014,7 @@
             "source": "29",
             "target": "9",
             "action": "18",
-            "action description": "threat",
+            "action_description": "threat",
             "chapter": "11.0",
             "page": "452.0"
         },
@@ -1022,7 +1022,7 @@
             "source": "29",
             "target": "15",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "8.0",
             "page": ""
         },
@@ -1030,7 +1030,7 @@
             "source": "29",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "9.0",
             "page": ""
         },
@@ -1038,7 +1038,7 @@
             "source": "29",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "11.0",
             "page": "454.0"
         },
@@ -1046,7 +1046,7 @@
             "source": "29",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "12.0",
             "page": "454.0"
         },
@@ -1054,7 +1054,7 @@
             "source": "29",
             "target": "18",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "16.0",
             "page": ""
         },
@@ -1062,7 +1062,7 @@
             "source": "29",
             "target": "21",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "12.0",
             "page": "454.0"
         },
@@ -1070,7 +1070,7 @@
             "source": "29",
             "target": "30",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "8.0",
             "page": ""
         },
@@ -1078,7 +1078,7 @@
             "source": "29",
             "target": "31",
             "action": "19",
-            "action description": "intervention",
+            "action_description": "intervention",
             "chapter": "9.0",
             "page": ""
         },
@@ -1086,7 +1086,7 @@
             "source": "31",
             "target": "9",
             "action": "21",
-            "action description": "hostility_non-lethal",
+            "action_description": "hostility_non-lethal",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -1094,7 +1094,7 @@
             "source": "31",
             "target": "9",
             "action": "17",
-            "action description": "insult",
+            "action_description": "insult",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -1102,7 +1102,7 @@
             "source": "31",
             "target": "18",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "10.0",
             "page": "452.0"
         },
@@ -1110,7 +1110,7 @@
             "source": "31",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "10.0",
             "page": "451.0"
         },
@@ -1118,7 +1118,7 @@
             "source": "31",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "11.0",
             "page": "453.0"
         },
@@ -1126,7 +1126,7 @@
             "source": "31",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "12.0",
             "page": "454.0"
         },
@@ -1134,7 +1134,7 @@
             "source": "31",
             "target": "18",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "16.0",
             "page": ""
         },
@@ -1142,7 +1142,7 @@
             "source": "31",
             "target": "18",
             "action": "13",
-            "action description": "giftgiving",
+            "action_description": "giftgiving",
             "chapter": "16.0",
             "page": ""
         },
@@ -1150,7 +1150,7 @@
             "source": "31",
             "target": "21",
             "action": "22",
-            "action description": "hostility_lethal",
+            "action_description": "hostility_lethal",
             "chapter": "12.0",
             "page": "455.0"
         },
@@ -1158,7 +1158,7 @@
             "source": "31",
             "target": "21",
             "action": "15",
-            "action description": "summons",
+            "action_description": "summons",
             "chapter": "12.0",
             "page": "454.0"
         },
@@ -1166,7 +1166,7 @@
             "source": "31",
             "target": "29",
             "action": "9",
-            "action description": "offer assistance",
+            "action_description": "offer assistance",
             "chapter": "9.0",
             "page": ""
         },
@@ -1174,7 +1174,7 @@
             "source": "31",
             "target": "30",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "8.0",
             "page": ""
         },
@@ -1182,7 +1182,7 @@
             "source": "32",
             "target": "30",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "8.0",
             "page": ""
         },
@@ -1190,7 +1190,7 @@
             "source": "32",
             "target": "33",
             "action": "2",
-            "action description": "marriage",
+            "action_description": "marriage",
             "chapter": "8.0",
             "page": ""
         },
@@ -1198,7 +1198,7 @@
             "source": "33",
             "target": "34",
             "action": "1",
-            "action description": "descent",
+            "action_description": "descent",
             "chapter": "8.0",
             "page": ""
         },
@@ -1206,7 +1206,7 @@
             "source": "35",
             "target": "18",
             "action": "8",
-            "action description": "request assistance",
+            "action_description": "request assistance",
             "chapter": "14.0",
             "page": "459.0"
         },
@@ -1214,7 +1214,7 @@
             "source": "35",
             "target": "19",
             "action": "10",
-            "action description": "provide information",
+            "action_description": "provide information",
             "chapter": "14.0",
             "page": "458.0"
         },
@@ -1222,7 +1222,7 @@
             "source": "36",
             "target": "9",
             "action": "17",
-            "action description": "insult",
+            "action_description": "insult",
             "chapter": "14.0",
             "page": "457.0"
         }

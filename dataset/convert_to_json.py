@@ -9,7 +9,7 @@ graph_json = {}
 with open('graph_nodes.csv') as nodes:
 	csv_reader = csv.reader(nodes, delimiter=',')
 	next(csv_reader)
-	fields_list = ["id", "label", "gender", "gender description", "chapter", "page"]
+	fields_list = ["id", "label", "gender", "gender_description", "chapter", "page"]
 
 	for row in csv_reader:
 		obj = {}
@@ -20,7 +20,7 @@ with open('graph_nodes.csv') as nodes:
 with open('graph_edges.csv') as edges:
 	csv_reader = csv.reader(edges, delimiter=',')
 	next(csv_reader)
-	fields_list = ["source", "target", "action", "action description", "chapter", "page"]
+	fields_list = ["source", "target", "action", "action_description", "chapter", "page"]
 
 	for row in csv_reader:
 		obj = {}

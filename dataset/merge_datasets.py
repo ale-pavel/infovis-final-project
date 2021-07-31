@@ -12,6 +12,8 @@ nodes_cols_reordered = nodes_cols[:2] + ['gender', 'gender description'] + nodes
 nodes_merge_reorder = nodes_merge[nodes_cols_reordered]
 nodes_joined = nodes_merge_reorder.sort_values(by=['id'])
 
+nodes_joined = nodes_joined.rename(columns={'gender description': 'gender_description'})
+
 # Pandas treats columns with NaN values as float (instead of ints). Force float to match nodes.chapter float type
 edges.chapter = edges.chapter.astype('float')
 
@@ -20,6 +22,8 @@ edges_cols = edges_merge.columns.tolist()
 edges_cols_reordered = edges_cols[:2] + ['action', 'action description']+ edges_cols[3:5]
 edges_merge_reorder = edges_merge[edges_cols_reordered]
 edges_joined = edges_merge_reorder.sort_values(by=['source', 'target'])
+
+edges_joined = edges_joined.rename(columns={'action description': 'action_description'})
 
 nodes_joined.to_csv('graph_nodes.csv', index=False)
 edges_joined.to_csv('graph_edges.csv', index=False)
