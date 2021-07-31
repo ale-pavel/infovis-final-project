@@ -18,7 +18,6 @@ function draw_graph(data) {
             .domain(genderData)
             .range(genderColours);
 
-  chart = () => {
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
@@ -42,93 +41,86 @@ function draw_graph(data) {
 
     });
 
-    const svg_external = d3.select("#graph_visualization")
-      .append("svg")
-      .attr("viewBox", [0, 0, width, height]);
+  const svg_external = d3.select("#graph_visualization")
+    .append("svg")
+    .attr("viewBox", [0, 0, width, height]);
 
-    //add encompassing group for the zoom 
-    var g = svg_external.append("g")
-      .attr("class", "everything");
+  //add encompassing group for the zoom 
+  var g = svg_external.append("g")
+    .attr("class", "everything");
 
-    //Create deffinition for the arrow markers showing relationship directions
-    g.append("defs").append("marker")
-        .attr("id", "arrow")
-        .attr("viewBox", "0 -3 10 10")
-        .attr("refX", 20)
-        .attr("refY", 0)
-        .attr("markerWidth", 8)
-        .attr("markerHeight", 8)
-        .attr("orient", "auto")
-        .append("svg:path")
-        .attr("d", "M0,-5L10,0L0,5");
+  //Create deffinition for the arrow markers showing relationship directions
+  g.append("defs").append("marker")
+      .attr("id", "arrow")
+      .attr("viewBox", "0 -3 10 10")
+      .attr("refX", 20)
+      .attr("refY", 0)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 8)
+      .attr("orient", "auto")
+      .append("svg:path")
+      .attr("d", "M0,-5L10,0L0,5");
 
-    const link = g.append("g")
-        .attr("stroke", "#999")
-        .attr("stroke-opacity", 0.6)
-      .selectAll("line")
-      .data(links)
-      .join("line")
-        .attr("stroke-width", 0.6)
-      .attr("marker-end", "url(#arrow)");
+  const link = g.append("g")
+      .attr("stroke", "#999")
+      .attr("stroke-opacity", 0.6)
+    .selectAll("line")
+    .data(links)
+    .join("line")
+      .attr("stroke-width", 0.6)
+    .attr("marker-end", "url(#arrow)");
 
-    link.append("title")
-        .text(d => d.action_description);
+  link.append("title")
+      .text(d => d.action_description);
 
-    const node = g.append("g")
-      .selectAll("g")
-      .data(nodes)
-      .enter().append("g")
-      .call(drag(simulation));
+  const node = g.append("g")
+    .selectAll("g")
+    .data(nodes)
+    .enter().append("g")
 
-    const circles = node.append("circle")
-        .attr("stroke", "#555")
-        .attr("stroke-width", 0.75)
-        .attr("r", 5)
-        .attr("fill", d => color(d.gender));
-        
+  const circles = node.append("circle")
+      .attr("stroke", "#555")
+      .attr("stroke-width", 0.75)
+      .attr("r", 5)
+      .attr("fill", d => color(d.gender));
+      
 
-    const circle_titles = node.append("text")
-        .text(d => d.label)
-        .attr('x', 6)
-        .attr('y', -8)
-        .style("font-size", "12px");
+  const circle_titles = node.append("text")
+      .text(d => d.label)
+      .attr('x', 6)
+      .attr('y', -8)
+      .style("font-size", "12px");
+
+  function drag_started(event) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    event.subject.fx = event.subject.x;
+    event.subject.fy = event.subject.y;
   }
-
-
-  drag = simulation => { 
-    function dragstarted(event) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      event.subject.fx = event.subject.x;
-      event.subject.fy = event.subject.y;
-    }
-    
-    function dragged(event) {
-      event.subject.fx = event.x;
-      event.subject.fy = event.y;
-    }
-    
-    function dragended(event) {
-      if (!event.active) simulation.alphaTarget(0);
-      event.subject.fx = null;
-      event.subject.fy = null;
-    }
-
-    /*//add zoom capabilities 
-    var zoom_handler = d3.zoom()
-      .on("zoom", zoom_actions);
-
-    zoom_handler(svg); 
-
-    //Zoom functions 
-    function zoom_actions(){
-        g.attr("transform", d3.event.transform)
-    }*/
-    
-    return d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended);
+  
+  function dragged(event) {
+    event.subject.fx = event.x;
+    event.subject.fy = event.y;
   }
+  
+  function drag_ended(event) {
+    if (!event.active) simulation.alphaTarget(0);
+    event.subject.fx = null;
+    event.subject.fy = null;
+  }
+  
+  const drag_handler = d3.drag()
+      .on("start", drag_started)
+      .on("drag", dragged)
+      .on("end", drag_ended);
 
-  chart();
+  drag_handler(node);
+
+  svg_external.call(d3.zoom()
+      .extent([[0, 0], [width, height]])
+      .scaleExtent([1, 8])
+      .on("zoom", zoomed));
+
+  function zoomed({transform}) {
+    g.attr("transform", transform);
+  }
 }
