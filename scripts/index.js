@@ -10,6 +10,7 @@ d3.json('dataset/graph.json')
 function draw_graph(data) {
   height = 600
   width = 1400
+  radius = 7;
 
   genderData = ["0", "1", "2"]
   genderColours = ["#F88B9D", "#8ECEFD", "#D3D3D3"]
@@ -23,7 +24,7 @@ function draw_graph(data) {
 
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id))
-        .force("charge", d3.forceManyBody().strength(-30))
+        .force("charge", d3.forceManyBody().strength(-20))
         .force('collide', d3.forceCollide().radius(30))
         .force("center", d3.forceCenter(width / 3, height / 2));
 
@@ -34,8 +35,11 @@ function draw_graph(data) {
         .attr("x2", d => d.target.x)
         .attr("y2", d => d.target.y);
 
+      //constrains the nodes to be within a box
       node
         .attr("transform", function(d) {
+          d.x = Math.max(radius, Math.min(width - radius, d.x));
+          d.y = Math.max(radius, Math.min(height - radius, d.y));
           return "translate(" + d.x + "," + d.y + ")";
         })
 
@@ -63,11 +67,11 @@ function draw_graph(data) {
 
   const link = g.append("g")
       .attr("stroke", "#999")
-      .attr("stroke-opacity", 0.6)
+      .attr("stroke-opacity", 0.8)
     .selectAll("line")
     .data(links)
     .join("line")
-      .attr("stroke-width", 0.6)
+      .attr("stroke-width", 0.8)
     .attr("marker-end", "url(#arrow)");
 
   link.append("title")
@@ -81,7 +85,7 @@ function draw_graph(data) {
   const circles = node.append("circle")
       .attr("stroke", "#555")
       .attr("stroke-width", 0.75)
-      .attr("r", 5)
+      .attr("r", radius)
       .attr("fill", d => color(d.gender));
       
 
