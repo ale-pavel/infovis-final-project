@@ -11,10 +11,81 @@ function draw_plot(data) {
   height = 400
   width = 1000
 
-  color = () => {
-    const scale = d3.scaleOrdinal(d3.schemeCategory10);
-    return d => scale(d.group);
+  chart = () => {
+    const links = data.links.map(d => Object.create(d));
+    const nodes = data.nodes.map(d => Object.create(d));
+
+    const simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+    const svg = d3.select("#graph_visualization")
+      .append("svg")
+      .attr("viewBox", [0, 0, width, height]);
+
+    const link = svg.append("g")
+        .attr("stroke", "#999")
+        .attr("stroke-opacity", 0.6)
+      .selectAll("line")
+      .data(links)
+      .join("line")
+        .attr("stroke-width", 0.6);
+
+    link.append("title")
+        .text(d => d.action_description);
+
+    const node = svg.append("g")
+        .attr("stroke", "#555")
+        .attr("stroke-width", 0.75)
+      .selectAll("circle")
+      .data(nodes)
+      .join("circle")
+        .attr("r", 5)
+        .attr("fill", d => color(d.gender))
+        .call(drag(simulation));
+
+    node.append("title")
+        .text(d => d.label);
+
+    /*const node = svg.append("g")
+      .selectAll("g")
+      .data(nodes)
+      .enter().append("g");
+
+    const circles = node.append("circle")
+        .attr("stroke", "#555")
+        .attr("stroke-width", 0.75)
+        .attr("r", 5)
+        .attr("fill", d => color(d.gender))
+        .call(drag(simulation));
+
+    node.append("title")
+        .text(d => d.label);*/
+
+    simulation.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y);
+
+    });
+
+    return svg.node();
   }
+
+
+  genderData = ["0", "1", "2"]
+  genderColours = ["#F88B9D", "#8ECEFD", "#D3D3D3"]
+
+  color = d3.scaleOrdinal()
+            .domain(genderData)
+            .range(genderColours);
 
   drag = simulation => { 
     function dragstarted(event) {
@@ -38,55 +109,6 @@ function draw_plot(data) {
         .on("start", dragstarted)
         .on("drag", dragged)
         .on("end", dragended);
-  }
-
-  chart = () => {
-    const links = data.links.map(d => Object.create(d));
-    const nodes = data.nodes.map(d => Object.create(d));
-
-    const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id))
-        .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
-
-    const svg = d3.select("#graph_visualization")
-       .append("svg")
-       .attr("viewBox", [0, 0, width, height]);
-
-    const link = svg.append("g")
-        .attr("stroke", "#999")
-        .attr("stroke-opacity", 0.6)
-      .selectAll("line")
-      .data(links)
-      .join("line")
-        .attr("stroke-width", d => Math.sqrt(d.value));
-
-    const node = svg.append("g")
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 1.5)
-      .selectAll("circle")
-      .data(nodes)
-      .join("circle")
-        .attr("r", 5)
-        .attr("fill", color)
-        .call(drag(simulation));
-
-    node.append("title")
-        .text(d => d.label);
-
-    simulation.on("tick", () => {
-      link
-          .attr("x1", d => d.source.x)
-          .attr("y1", d => d.source.y)
-          .attr("x2", d => d.target.x)
-          .attr("y2", d => d.target.y);
-
-      node
-          .attr("cx", d => d.x)
-          .attr("cy", d => d.y);
-    });
-
-    return svg.node();
   }
 
   chart();
