@@ -8,8 +8,8 @@ d3.json('dataset/graph.json')
 
 
 function draw_plot(data) {
-  height = 1400
-  width = 800
+  height = 1600
+  width = 2000
 
   chart = () => {
     const links = data.links.map(d => Object.create(d));
@@ -18,7 +18,8 @@ function draw_plot(data) {
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force('collide', d3.forceCollide(50))
+        .force("center", d3.forceCenter(width / 3, height / 2));
 
     const svg = d3.select("#graph_visualization")
       .append("svg")
@@ -63,8 +64,8 @@ function draw_plot(data) {
 
     const circle_titles = node.append("text")
         .text(d => d.label)
-        .attr('x', 8)
-        .attr('y', 2);
+        .attr('x', 6)
+        .attr('y', -8);
 
     simulation.on("tick", () => {
       link
