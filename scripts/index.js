@@ -132,6 +132,8 @@ function draw_graph(data) {
     .style("text-anchor", "middle")
     .style("pointer-events", "none")
     .attr("startOffset", "50%")
+    .attr("stroke", "none")
+    .attr("fill", "black")
     .text(d => d.action_description);
 
   function drag_started(event) {
