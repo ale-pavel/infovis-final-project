@@ -24,7 +24,7 @@ function draw_graph(data) {
 
     const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id))
-        .force("charge", d3.forceManyBody().strength(-20))
+        .force("charge", d3.forceManyBody().strength(-5))
         .force('collide', d3.forceCollide().radius(30))
         .force("center", d3.forceCenter(width / 3, height / 2));
 
@@ -42,6 +42,15 @@ function draw_graph(data) {
           d.y = Math.max(radius, Math.min(height - radius, d.y));
           return "translate(" + d.x + "," + d.y + ")";
         })
+
+      edgepaths.attr('d', function (d) {
+          return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y;
+      });
+
+      edgelabels.attr('transform', (d) => {
+        return 'rotate(0)';
+      });
+
 
     });
 
@@ -68,16 +77,15 @@ function draw_graph(data) {
   const link = g.append("g")
       .attr("stroke", "#999")
       .attr("stroke-opacity", 0.8)
+      .attr("class", "link-g")
     .selectAll("line")
     .data(links)
     .join("line")
       .attr("stroke-width", 0.8)
     .attr("marker-end", "url(#arrow)");
 
-  link.append("title")
-      .text(d => d.action_description);
-
   const node = g.append("g")
+    .attr("class", "node-g")
     .selectAll("g")
     .data(nodes)
     .enter().append("g")
@@ -94,6 +102,37 @@ function draw_graph(data) {
       .attr('x', 6)
       .attr('y', -8)
       .style("font-size", "12px");
+
+
+  link.append("title")
+      .text(d => d.action_description);
+
+  const edgepaths = d3.select(".link-g")
+    .selectAll('path')
+    .data(links)
+    .join('path')
+      .attr('class', 'edgepath')
+      .attr('fill-opacity', 0)
+      .attr('stroke-opacity', 0)
+      .attr('id', (d, i) => 'edgepath' + i)
+      .style("pointer-events", "none");
+
+  const edgelabels = d3.select(".link-g")
+    .selectAll('text')
+    .data(links)
+    .join('text')
+      .style("pointer-events", "none")
+      .attr('class', 'edgelabel')
+      .attr('id', (d, i) => 'edgelabel' + i)
+      .attr('font-size', 8)
+      .attr('fill', '#aaa');
+
+  edgelabels.append('textPath')
+    .attr('xlink:href', (d, i) =>'#edgepath' + i)
+    .style("text-anchor", "middle")
+    .style("pointer-events", "none")
+    .attr("startOffset", "50%")
+    .text(d => d.action_description);
 
   function drag_started(event) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
