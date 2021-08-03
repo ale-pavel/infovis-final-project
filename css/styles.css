@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.everything {}
+.link-group-g {}
+.group_invis {}
+.node-g {}
+
+.invis {
+	fill: none;
+	stroke-width: 0px;
+}
+
+.group_invis > text {
+	 font-size: 8px;
+     fill: #aaa;
+}
+
+.group_invis > textPath {
+     fill: #ccc;
+     stroke: none;
+     font-size: 10px;
+}
+
+.link-g {
+	 stroke: #999;
+     stroke-opacity: 0.25;
+     fill: none;
+     stroke-width: 0.8; /* For some reason modifies the arrow pointer scale  */
+}
+
+#arrow {
+	fill: #ccc;
+}
+
+.node-g > g > circle {
+  	stroke: #555;
+  	stroke-width: 0.75;
+}
+
+.node-g > g > text {
+    font-size: 12px;
+}
+
