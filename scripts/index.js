@@ -10,7 +10,7 @@ d3.json('dataset/graph.json')
 function draw_graph(data) {
   height = 600
   width = 1400
-  radius = 5;
+  radius = 10;
 
   genderData = ["0", "1", "2"]
   genderColours = ["#F88B9D", "#8ECEFD", "#D3D3D3"]
@@ -44,7 +44,7 @@ function draw_graph(data) {
     };
 
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+        .force("link", d3.forceLink(links).id(d => d.id).distance(60))
         .force("charge", d3.forceManyBody().strength(-30))
         .force('collide', d3.forceCollide().radius(60))
         .force("center", d3.forceCenter(width / 3, height / 2));
@@ -64,21 +64,16 @@ function draw_graph(data) {
         var dx = d.target.x - d.source.x,
           dy = d.target.y - d.source.y,
           dr = Math.sqrt(dx*dx+dy*dy)*(d.linknum+homogeneous)/(curve*homogeneous);  //linknum is defined above
-          if (dr === 0) { //for some reason the autolink (9,9) on Hrafnkels does not load into data
-            dr = 120;
-          }
         return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
       });
 
+      //calculating the invisible arc path for the labels (invisible arc) is quite costly, degrades simulation frames
       pathInvis.attr("d", function(d) {
         var curve = 2;
         var homogeneous = 3.2;
         var dx = d.target.x - d.source.x,
           dy = d.target.y - d.source.y,
           dr = Math.sqrt(dx*dx+dy*dy)*(d.linknum+homogeneous)/(curve*homogeneous);  //linknum is defined above
-          if (dr === 0) { //for some reason the autolink (9,9) on Hrafnkels does not load into data
-            dr = 120;
-          }
         return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
       });
 
@@ -131,14 +126,27 @@ function draw_graph(data) {
     .selectAll("path")
     .data(links)
     .join("path")
-    .attr("marker-end", "url(#arrow)");
+    .attr("marker-end", "url(#arrow)")
+    .attr("class", function(d) {return "link-g source" + d.source.id} );
 
   //Create deffinition for the arrow markers showing relationship directions
   g.append("defs").append("marker")
       .attr("id", "arrow")
       .attr("viewBox", "0 -5 15 15")
-      .attr("refX", 19)
-      .attr("refY", -1)
+      .attr("refX", 16)
+      .attr("refY", 0)
+      .attr("markerWidth", 15)
+      .attr("markerHeight", 15)
+      .attr("orient", "auto")
+      .attr('xoverflow', 'visible')
+      .append("svg:path")
+      .attr("d", "M0,-5L10,0L0,5");
+
+  g.append("defs").append("marker")
+      .attr("id", "arrow_selected")
+      .attr("viewBox", "0 -5 15 15")
+      .attr("refX", 16)
+      .attr("refY", 0)
       .attr("markerWidth", 15)
       .attr("markerHeight", 15)
       .attr("orient", "auto")
@@ -150,11 +158,11 @@ function draw_graph(data) {
     .attr("class", "node-g")
     .selectAll("g")
     .data(nodes)
-    .enter().append("g")
+    .enter().append("g") 
 
   const circles = node.append("circle")
       .attr("r", radius)
-      .attr("fill", d => color(d.gender));    
+      .attr("fill", d => color(d.gender));
 
   const circle_titles = node.append("text")
       .text(d => d.label)
@@ -163,6 +171,36 @@ function draw_graph(data) {
 
   path.append("title")
       .text(d => d.action_description);
+
+  // Add the highlighting functionality
+  node.on('mouseover', function(d) {
+    // Highlight the nodes: every node is grey except of him
+    //node.style('fill', "#ccc")
+    //d3.select(this).style('fill', '#000')
+    // Highlight the connections
+    path
+      .style('stroke', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '#000' : '#ccc';})
+      .style('stroke-width', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '1.25' : '1';})
+      .style('stroke-opacity', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '0.75' : '0.25';})
+      .attr("marker-end", function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? 'url(#arrow_selected)' : 'url(#arrow)';})
+
+    pathLabel
+      .style('fill', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '#000' : '#ccc';})
+      .style('stroke-width', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '2' : '1';})
+      .style('stroke-opacity', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '0.75' : '0.25';})
+      .style('font-size', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '14px' : '10px';})
+  })
+  .on('mouseout', function (d) {
+    //node.style('fill', "#000")
+    path
+      .style('stroke', '#ccc')
+      .style('stroke-width', '1')
+      .style('stroke-opacity', '0.25')
+      .attr("marker-end", "url(#arrow)")
+    pathLabel
+      .style('fill', '#ccc')
+      .style('font-size', '10px')
+  });
 
   function drag_started(event) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
