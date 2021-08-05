@@ -55,6 +55,7 @@ function draw_graph(data) {
         var homogeneous = 3.2;
         var dx = d.target.x - d.source.x,
           dy = d.target.y - d.source.y,
+          //dr = 75 / d.linknum;
           dr = Math.sqrt(dx*dx+dy*dy)*(d.linknum+homogeneous)/(curve*homogeneous);  //linknum is defined above
         return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
       });
@@ -65,6 +66,7 @@ function draw_graph(data) {
         var homogeneous = 3.2;
         var dx = d.target.x - d.source.x,
           dy = d.target.y - d.source.y,
+          //dr = 75 / d.linknum;
           dr = Math.sqrt(dx*dx+dy*dy)*(d.linknum+homogeneous)/(curve*homogeneous);  //linknum is defined above
         return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
       });
