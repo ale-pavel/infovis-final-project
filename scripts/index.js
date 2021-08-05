@@ -44,20 +44,12 @@ function draw_graph(data) {
     };
 
     const simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(60))
-        .force("charge", d3.forceManyBody().strength(-30))
-        .force('collide', d3.forceCollide().radius(60))
+        .force("link", d3.forceLink(links).id(d => d.id).distance(60).strength(0.01))
+        .force("charge", d3.forceManyBody().strength(-25))
+        .force('collide', d3.forceCollide().radius(55))
         .force("center", d3.forceCenter(width / 3, height / 2));
 
     simulation.on("tick", () => {
-      /*
-      path
-        .attr("d", function(d) {
-          const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
-          return `M${d.source.x},${d.source.y} A${r},${r} 0 0,1 ${d.target.x},${d.target.y}`;
-        });
-      */
-
       path.attr("d", function(d) {
         var curve = 2;
         var homogeneous = 3.2;
@@ -159,6 +151,7 @@ function draw_graph(data) {
     .selectAll("g")
     .data(nodes)
     .enter().append("g") 
+    .attr('id', d => 'node_' + d.id)
 
   const circles = node.append("circle")
       .attr("r", radius)
@@ -172,16 +165,43 @@ function draw_graph(data) {
   path.append("title")
       .text(d => d.action_description);
 
+  function get_target_nodes(node_id) {
+    target_list = [];
+
+    for (const key in data.links) {
+      if (data.links[key].source == node_id)
+        target_list.push('node_' + data.links[key].target);
+    }
+
+    return target_list;
+  }
+
   // Add the highlighting functionality
   node.on('mouseover', function(d) {
     // Highlight the nodes: every node is grey except of him
     //node.style('fill', "#ccc")
+    node.style('fill-opacity', '0.25')
+    node.style('stroke-opacity', '0.25')
+    d3.select(this).style('fill-opacity', '1')
+    d3.select(this).style('stroke-opacity', '1')
+
+    const target_nodes_list = get_target_nodes(d.currentTarget.__data__.index +1);
+    //console.log(target_nodes_list);
+    for (var i = 0, len = target_nodes_list.length; i < len; i++) {
+      elem = target_nodes_list[i];
+      console.log(elem);
+      d3.select('#' + elem).style('fill-opacity', '1');
+      d3.select('#' + elem).style('stroke-opacity', '1');
+    }
+
+    // Edit text colour for a node
     //d3.select(this).style('fill', '#000')
+
     // Highlight the connections
     path
       .style('stroke', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '#000' : '#ccc';})
-      .style('stroke-width', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '1.25' : '1';})
-      .style('stroke-opacity', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '0.75' : '0.25';})
+      .style('stroke-width', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '1' : '1';})
+      .style('stroke-opacity', function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? '0.5' : '0.25';})
       .attr("marker-end", function (link_d) { return link_d.source.id == (d.currentTarget.__data__.index +1) ? 'url(#arrow_selected)' : 'url(#arrow)';})
 
     pathLabel
@@ -192,11 +212,15 @@ function draw_graph(data) {
   })
   .on('mouseout', function (d) {
     //node.style('fill', "#000")
+    node.style('fill-opacity', '1')
+    node.style('stroke-opacity', '1')
+
     path
       .style('stroke', '#ccc')
       .style('stroke-width', '1')
       .style('stroke-opacity', '0.25')
       .attr("marker-end", "url(#arrow)")
+
     pathLabel
       .style('fill', '#ccc')
       .style('font-size', '10px')
