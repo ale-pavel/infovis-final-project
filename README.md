@@ -1,6 +1,12 @@
 # infovis-final-project
 Progetto finale per l'esame di [Visualizzazione delle Informazioni](http://www.dia.uniroma3.it/~infovis/) di Roma Tre. Ulteriori informazioni sono disponibili su [Moodle](https://ingegneria.el.uniroma3.it/mod/page/view.php?id=10701), progetto #15.
 
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/27208682/129222991-4f81e590-2b65-46a3-bc5d-fd6753d5833c.png" width="320" height="275">
+  <img src="https://user-images.githubusercontent.com/27208682/129223580-b725e2b9-374d-4009-b00d-478965abf241.png" width="640" height="275">
+</p>
+
+
 
 ## Obiettivi
 L'obiettivo è esplorare il grafo della [saga islandese Hrafnkels](https://en.wikipedia.org/wiki/Hrafnkels_saga). In particolare si vuole riuscire a comprendere quali siano le relazioni tra i personaggi, definite dalle azioni che li riguardano, studiando il multigrafo a disposizione. 
@@ -63,6 +69,10 @@ Il calcolo delle curvature degli archi introduce un maggiore carico computaziona
 Una [soluzione](https://observablehq.com/@d3/mobile-patent-suits) alternativa all'utilizzo di label testuali è quella di usare archi colorati rappresentanti i diversi tipi di azioni, ma ciò non è realizzabile per questo caso d'uso, essendoci quasi 30 azioni diverse (a meno di non raggrupparle per tipologie, ma non è banale farlo e il risultato non garantirebbe precisione nel visionare il grafo). Inoltre l'esempio è valido solo per grafi con grado pari al massimo a 2 (curvatura calcolata staticamente).
 
 Nel dataset è presente un arco che parte dal nodo 9 (Hrafnkel) e finisce nel nodo 9, ovvero un autociclo. Non è chiaro perché questo arco non venga caricato da D3.js dentro ```links```, e non è visualizzabile nell'applicazione. Un [esempio](https://bl.ocks.org/mattkohl/08fe7f53f592ab699ea15af46be04c48) implementa la funzionalità richiesta, anche per archi multipli.
+
+Inoltre è presente un bug: alcuni archi non presentano label, e non è chiaro come mai questo succeda (sembra che alcune label vengano sovrapposte invece di essere renderizzate su archi diversi).
+
+<img src="https://user-images.githubusercontent.com/27208682/129221982-f55ee28a-a020-44c6-899e-5ea51a1ab489.png" width="480" height="414">
 
 
 ## Sviluppi Futuri
