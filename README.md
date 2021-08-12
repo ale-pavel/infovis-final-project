@@ -1,11 +1,7 @@
 # infovis-final-project
 Progetto finale per l'esame di [Visualizzazione delle Informazioni](http://www.dia.uniroma3.it/~infovis/) di Roma Tre. Ulteriori informazioni sono disponibili su [Moodle](https://ingegneria.el.uniroma3.it/mod/page/view.php?id=10701), progetto #15.
 
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/27208682/129222991-4f81e590-2b65-46a3-bc5d-fd6753d5833c.png" width="320" height="275">
-  <img src="https://user-images.githubusercontent.com/27208682/129223580-b725e2b9-374d-4009-b00d-478965abf241.png" width="640" height="275">
-</p>
-
+<img src="https://user-images.githubusercontent.com/27208682/129223580-b725e2b9-374d-4009-b00d-478965abf241.png" width="1024">
 
 
 ## Obiettivi
@@ -61,6 +57,8 @@ Sono stati utilizzati diversi esempi di codice D3.js per integrare funzionalità
 - [Label su archi e frecce di direzione](http://bl.ocks.org/fancellu/2c782394602a93921faff74e594d1bb1): Gli archi diretti necessitano di frecce per mostrare la loro direzione, e di label testuali per identificare le azioni tra personaggi. Senza ulteriori modifiche i numerosi archi/label si sovrapporrebbero tra loro.
 - [Gestione di archi multipli](https://bl.ocks.org/mattkohl/146d301c0fc20d89d85880df537de7b0): Mediante la curvatura degli archi (dipendente dal numero di archi che collegano ogni coppia di nodi) è possibile evitare che essi siano sovrapposti, permettendo una maggiore comprensione del grafo.
 - [Evidenziare archi e label col mouse](http://jsfiddle.net/2pdxz/2/): Per permettere di fruire meglio della visualizzazione le label e gli archi vengono visualizzati con una minore opacità, che viene aumentata quando l'utente interagisce coi nodi di interesse (facendo hovering del mouse). In particolare vengono evidenziati gli archi uscenti dal nodo selezionato, con le relative label.
+
+<img src="https://user-images.githubusercontent.com/27208682/129222991-4f81e590-2b65-46a3-bc5d-fd6753d5833c.png" width="480">
 
 
 ## Limitazioni
